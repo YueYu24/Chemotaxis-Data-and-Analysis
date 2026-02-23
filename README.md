@@ -17,7 +17,7 @@ Comparing navigation strategies of *C. elegans* with different conditioning hist
 | **Sexual** | Worms pre-exposed to odour with starvation in the presence of mates |
 
 ### Assay Setup
-- Worms are placed on an agar plate with an odor patch (represented by `food_cnt_coord` in the data)
+- Worms are placed on an agar plate with an odor patch
 - Video recordings capture worm locomotion and navigation toward/away from the odor source
 - Single-worm tracking mode (`oneworm`) is used for high-resolution behavioral analysis
 
@@ -74,14 +74,9 @@ Each `metadata_featuresN_oneworm.hdf5` file contains the following datasets:
 - `eigen_projection_[1-7]` - Eigenworm coefficients (shape descriptors)
 - `width_{body_part}` - Body width at head_base, midbody, tail_base
 
-**Chemotaxis-Relevant Features:**
-- `orientation_food_edge` - Head-tail orientation relative to odor patch (negative = pointing away, positive = pointing toward)
-- `dist_from_food_edge` - Distance from odor patch boundary (negative = outside, positive = inside)
-- `path_curvature_{body_part}` - Curvature of movement trajectory
 
 **Behavioral State Flags:**
 - `motion_mode` - Forward (1), paused (0), or backward (-1) locomotion
-
 ---
 
 ## Data Access
